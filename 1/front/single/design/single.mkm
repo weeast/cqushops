@@ -1,0 +1,8 @@
+<MKM version="2.0" imageFileUrl="file:///F:/cqushop/1/front/single/design/single.jpg">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="45" x="427" y="291"/>
+    <LengthMark direction="3" color="16711680" length="20" x="413" y="335"/>
+    <LengthMark direction="3" color="16711680" length="184" x="370" y="376"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16742656" offsetX="25" offsetY="10" x="735" y="384"/>
+  </Marks>
+</MKM>

@@ -1,0 +1,155 @@
+﻿    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>EasyBuying</title>
+    <script type="text/javascript" src="JS/JScript1.js" charset="GB2312"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=ANSI" />
+    <link type="text/css" rel="Stylesheet" href="CSS/StyleSheet1.css" />
+</head>
+<body onload="CheckLog();getItem()">
+      <div id="top-part">
+        <div id="top-LogIn">
+           <div id="top-LogIn-Items1">
+                <form name="top_form">
+                用户名
+                <input class="inputBox" type="text" name="log_uname" size="12" />
+                &nbsp&nbsp&nbsp 密码
+                <input class="inputBox" type="password" name="log_upwd" size="12" />
+                <span onclick="topRequst()" id="top_log_in_button" style="text-decoration: none; color: White;">登录</span>&nbsp&nbsp&nbsp
+                <a href=""  style="text-decoration: none; color: White;">忘记密码</a>
+                </form>
+            </div>
+            <div id="top-Loged" style="display:none;"><p align="center" style="font-family:微软雅黑;font-size:14px;color:White;position:relative;top:-14px;left:-103px;" >Welcome to our online shop</p><span id="top_log_out_button" onclick="LogOut()" style="text-decoration:underline;position:relative;top:-48px;left:280px;">注销登录</span></div>
+            <div id="top-LogIn-Items2">
+                <span class="top-LogIn-Items2"><a href="../register/register.html" target="_blank" style="text-decoration: none;
+                    color: White;">会员注册</a></span> <span class="top-LogIn-Items2"><a href="" target="_blank"
+                        style="text-decoration: none; color: White;">收藏夹</a></span> <span class="top-LogIn-Items2">
+                            <a href="" target="_blank" style="text-decoration: none; color: White;">在线客服</a></span>
+                <span class="top-LogIn-Items2"><a href="" target="_blank" style="text-decoration: none;
+                    color: White;">论坛</a></span>
+            </div>
+        </div>
+        <div id="top-head">
+            <div id="logo">
+                <img src="img/奇葩小组购奇葩.jpg" alt="" /></div>
+            <div id="search">
+            <div class="searchItems">
+            <ol>
+                <li><a href="" style="text-decoration: none; color: #999">数码</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">创意</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">家电</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">跳蚤市场</a></li>
+            </ol>
+            </div>
+            <div style="height:32px">
+                <form action="">
+                <div id="search-text">
+                    <input id="s" autofocus="true" name="s" size="45">
+                </div>
+                <input id="searchButton" type="image" src="img/搜索.png" alt="Search" />
+                </form>
+                </div>
+                <div class="searchItems">
+            <ol>
+                <li><a href="" style="text-decoration: none; color: #999">服饰</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">美食</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">书本</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">动漫周边</a></li>
+            </ol>
+            </div>
+            </div>
+        </div>
+      </div>
+      <div id="middle-part">
+        <img src="img/流程.png" alt="" style="position:relative;left:30px;height:28px; margin-top:10px;" />
+        <div id="empty-car" style="position:relative;top:40px;width:800px;height:400px;display:block;">
+        <img src="img/shopcar.png" alt="" style="position:absolute;top:55px;left:100px;" />
+        <p style="font-family:微软雅黑;font-size:14px;color:#333333;position:absolute;top:105px;left:350px; line-height:30px;" >您的购物车还是空的，赶紧行动吧。<br />
+        <a href="" style="color:#FFB33F;">点击这里</a>，进入奇葩主页，享受购物的乐趣吧。</p></div>
+        <div id="item-in-car" style="position:relative;left:30px;width:745px;height:auto;margin-top:10px;background-color:White;display:none;">
+          <div style="position:relative;top:10px;width:745px;height:25px;border-bottom:1px solid #A5A5A5;">
+          <span style="position:relative;float:left;width:350px;height:25px;"><p style="position:absolute;left:40px;font-family:微软雅黑;font-size:14px;color:#656565;margin:1px;">商品信息</p></span>
+          <span style="position:relative;float:left;width:120px;height:25px;"><p style="position:absolute;left:20px;font-family:微软雅黑;font-size:14px;color:#656565;margin:1px;">单位（元）</p></span>
+          <span style="position:relative;float:left;width:100px;height:25px;"><p style="position:absolute;left:35px;font-family:微软雅黑;font-size:14px;color:#656565;margin:1px;">数量</p></span>
+          <span style="position:relative;float:left;width:167px;height:25px;"><p style="position:absolute;left:40px;font-family:微软雅黑;font-size:14px;color:#656565;margin:1px;">小计（元）</p></span>
+          </div>
+          <div id="item1" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3; margin-top:40px;display:none;">
+            <div style="position:relative;float:left;width:135px;border:"><img name="img" id="item-picture1" src="img/商品.png" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name1" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price1" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number1" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total1" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div>
+          </div>
+          <div id="item2" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none; ">
+             <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture2" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name2" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price2" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number2" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total2" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div>
+          </div>
+          <div id="item3" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none;">
+            <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture3" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name3" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price3" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number3" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total3" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div></div>
+          <div id="item4" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none;">
+            <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture4" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name4" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price4" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number4" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total4" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div></div>
+          <div id="item5" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none;">
+            <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture5" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name5" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price5" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number5" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total5" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div></div>
+          <div id="item6" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none;">
+            <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture6" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name6" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price6" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number6" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total6" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div></div>
+          <div id="item7" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none;">
+            <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture7" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name7" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price7" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number7" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total7" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div></div>
+          <div id="item8" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none;">
+            <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture8" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name8" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price8" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number8" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total8" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div></div>
+          <div id="item9" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none;">
+            <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture9" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name9" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price9" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number9" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total9" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div></div>
+          <div id="item10" style="position:relative;width:745px;height:76px;border-bottom:1px solid #E3E3E3;margin-top:25px;display:none;">
+            <div style="position:relative;float:left;width:135px;"><img src="img/商品.png" id="item-picture10" style="position:relative;left:10%;" alt="" /></div>
+            <div style="position:relative;float:left;width:212px;top:40%;"><div id="item-name10" style="position:relative;width:212px;font-family:微软雅黑;font-size:14px;color:#666;">ziiiro Aurora极光系列-白色Snow</div></div>
+            <div style="position:relative;float:left;width:120px;top:40%;"><div id="item-price10" style="position:relative;left:15%;width:120px;font-family:微软雅黑;font-size:14px;color:#666;">￥1580.00</div></div>
+            <div style="position:relative;float:left;width:100px;top:40%;"><div id="item-number10" style="position:relative;left:50%;width:100px;font-family:微软雅黑;font-size:14px;color:#666;">1</div></div>
+            <div style="position:relative;float:left;width:168px;top:40%;"><div id="item-total10" style="position:relative;left:25%;width:168px;font-family:微软雅黑;font-size:14px;color:#FE9B01;">￥1580.00</div></div></div>
+          <div id="in-total">
+            <p style="font-family:微软雅黑;font-size:14px;color:#333; margin:5px;">商品总价（不含运费）:&nbsp;&nbsp;<span id="total-money" style="color:#FF7400;">1580.00</span>元</p>
+            <img src="img/结算.png" alt="" style=" position:absolute;left:245px;top:0px;" />
+          </div>
+        </div>
+      </div>
+      <div id="bottom-service">
+        <ol id="bottom-service-Items">
+            <li><a href="" style="text-decoration: none; color: #999">关于我们</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">品牌合作</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">售后服务</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">帮助中心</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">服务条款</a></li>
+            <li style="float: right;margin:0px;">©copyright&nbsp&nbsp重庆大学软件学院奇葩小组</li>
+        </ol>
+      </div>
+</body>
+</html>

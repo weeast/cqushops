@@ -1,0 +1,186 @@
+// JScript source code
+var xmlHttp;
+var xmlHttp1;
+var xmlHttp2;
+function creatXMLHttpRequest2(){
+    if (window.ActiveXObject) {
+        xmlHttp2 = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if (window.XMLHttpRequest) {
+        xmlHttp2 = new XMLHttpRequest();
+    }
+}
+function LogOutChange() {
+    if (xmlHttp2.readyState == 2) {
+    }
+    if (xmlHttp2.readyState == 4) {
+        if (xmlHttp2.status == 200 || xmlHttp2.status == 0) {
+            var myXML = xmlHttp2.responseXML;
+            var logOutStateNode = myXML.getElementsByTagName("logOut");
+            var logOutState=logOutStateNode[0].firstChild.nodeValue;
+            if (logOutState == 1) {
+                document.getElementById("loged-part").style.display = "none";
+                document.getElementById("top-Loged").style.display = "none";
+            }
+        }
+    }
+}
+function LogOut() {
+    creatXMLHttpRequest2();
+    if (xmlHttp2 != null) {
+        var toSend = "logOut=1";
+        xmlHttp2.open("post", "../../backplat/logout.php", true);
+        xmlHttp2.setRequestHeader("Content-Length", toSend.length);
+        xmlHttp2.setRequestHeader("CONTENT-TYPE", "application/x-www-form-urlencoded");
+        xmlHttp2.onreadystatechange = LogOutChange;
+        xmlHttp2.send(toSend);
+    }
+}
+function creatXMLHttpRequest() {
+    if (window.ActiveXObject) {
+        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if (window.XMLHttpRequest) {
+        xmlHttp = new XMLHttpRequest();
+    }
+}
+function creatXMLHttpRequest1() {
+    if (window.ActiveXObject) {
+        xmlHttp1 = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if (window.XMLHttpRequest) {
+        xmlHttp1 = new XMLHttpRequest();
+    }
+}
+function httpStatteChange() {
+    if (xmlHttp.readyState == 2) {
+    }
+    if (xmlHttp.readyState == 4) {
+        if (xmlHttp.status == 200 || xmlHttp.status == 0) {
+            var myXML = xmlHttp.responseXML;
+            var nNode = myXML.getElementsByTagName("number");
+            var Number = nNode[0].childNodes[0].nodeValue;
+            var mNode = myXML.getElementsByTagName("totalMoney");
+            var totalMoney = mNode[0].childNodes[0].nodeValue;
+            if (Number != "0") {
+                document.getElementById("empty-car").style.display = "none";
+                document.getElementById("item-in-car").style.display = "block";
+                for (var i = 1; i <= Number; ++i) {
+                    var itemId = "item" + i;
+                    var myImg = document.getElementById("item-picture"+i);
+                    var myName = document.getElementById("item-name" + i);
+                    var myPrice = document.getElementById("item-price" + i);
+                    var myNumber = document.getElementById("item-number" + i);
+                    var myTotal = document.getElementById("item-total" + i);
+                    var node = document.getElementById(itemId);
+                    var xmlNode = myXML.getElementsByTagName(itemId);
+                    var imgSrc = xmlNode[0].getElementsByTagName("imgsrc");
+                    var mySrc=imgSrc[0].firstChild.nodeValue;
+                    var itemName = xmlNode[0].getElementsByTagName("itemName");
+                    var myName1=itemName[0].firstChild.nodeValue;
+                    var price = xmlNode[0].getElementsByTagName("price");
+                    var myPrice1 = price[0].firstChild.nodeValue;
+                    var itemNumber = xmlNode[0].getElementsByTagName("itemNumber");
+                    var myNumber1=itemNumber[0].firstChild.nodeValue;
+                    var itemTotal = xmlNode[0].getElementsByTagName("itemTotal");
+                    var myTotal1 = itemTotal[0].firstChild.nodeValue;
+                    mySrc1 = "../img/item/" + mySrc + ".png";
+                    alert(mySrc1);
+                    myImg.src = mySrc;
+                    myName.firstChild.nodeValue = myName1;
+                    myPrice.firstChild.nodeValue = myPrice1;
+                    myNumber.firstChild.nodeValue = myNumber1;
+                    myTotal.firstChild.nodeValue = myTotal1;
+                    node.style.display = "block";
+                }
+                document.getElementById("total-money").firstChild.nodeValue = totalMoney;
+            }
+        }
+    }
+}
+function getItem() {
+    creatXMLHttpRequest();
+    if (xmlHttp != null) {
+    	var toSend="action=1";
+        xmlHttp.open("post", "../../backplat/shopCart.php", true);
+        xmlHttp.setRequestHeader("Content-Length", toSend.length);
+        xmlHttp.setRequestHeader("CONTENT-TYPE", "application/x-www-form-urlencoded");
+        xmlHttp.onreadystatechange = httpStatteChange;
+        xmlHttp.send(toSend);
+    }
+}
+function topCheck() {
+    if (document.top_form.log_uname.value == "") {
+        alert("请输入会员名");
+        return false;
+    }
+    else if (document.top_form.log_upwd.value == "") {
+        alert("请输入密码");
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+function topHttpStatteChange() {
+    if (xmlHttp.readyState == 2) {
+    }
+    if (xmlHttp.readyState == 4) {
+        if (xmlHttp.status == 200 || xmlHttp.status == 0) {
+            var myXML = xmlHttp.responseXML;
+            var test = xmlHttp.responseText;
+            if (test == "密码不正确")
+                alert("用户名或密码不正确");
+            else if (test == "用户不存在")
+                alert("该用户名不存在，请重新输入");
+            else
+                document.getElementById("top-Loged").style.display = "block";
+        }
+        else {
+            alert("异步调用出错\n返回的HTTP状态码为:" + xmlHttp.status + "/n返回的HTTP状态信息为:" + xmlHttp.statusText);
+        }
+    }
+}
+function topRequst() {
+    if (topCheck() == true) {
+        creatXMLHttpRequest();
+        if (xmlHttp != null) {
+            var log_uname = document.top_form.log_uname.value;
+            var log_upwd = document.top_form.log_upwd.value;
+            var toSend = "log_uname=" + encodeURI(log_uname) + "&log_upwd=" + encodeURI(log_upwd);
+            xmlHttp.open("post", "../../backplat/Log-in.php", true);
+            xmlHttp.setRequestHeader("Content-Length", toSend.length);
+            xmlHttp.setRequestHeader("CONTENT-TYPE", "application/x-www-form-urlencoded");
+            xmlHttp.onreadystatechange = topHttpStatteChange;
+            xmlHttp.send(toSend);
+        }
+    }
+}
+function LogStateChange() {
+    if (xmlHttp1.readyState == 2) {
+    }
+    if (xmlHttp1.readyState == 4) {
+        if (xmlHttp1.status == 200 || xmlHttp1.status == 0) {
+            var myXML = xmlHttp1.responseXML;
+            var logNode = myXML.getElementsByTagName("logState");
+            var logState=logNode[0].childNodes[0].nodeValue;
+            if (logState == 1) {
+                document.getElementById("top-Loged").style.display = "block";
+            }
+        }
+        else {
+            alert("异步调用出错\n返回的HTTP状态码为:" + xmlHttp1.status + "/n返回的HTTP状态信息为:" + xmlHttp1.statusText);
+        }
+    }
+}
+function CheckLog() {
+    creatXMLHttpRequest1();
+    if (xmlHttp1 != null) {
+        var toSend = "checklog=0";
+        xmlHttp1.open("post", "../../backplat/logState.php", true);
+        xmlHttp1.setRequestHeader("Content-Length", toSend.length);
+        xmlHttp1.setRequestHeader("CONTENT-TYPE", "application/x-www-form-urlencoded");
+        xmlHttp1.onreadystatechange = LogStateChange;
+        xmlHttp1.send(toSend);
+    }
+}

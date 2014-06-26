@@ -1,0 +1,9 @@
+<MKM version="2.0" imageFileUrl="file:///F:/wamp/www/cqushop/1/front/classification/img/ClassificationPage.png">
+  <Marks>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16425482" offsetX="25" offsetY="10" x="509" y="296"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16425482" offsetX="25" offsetY="10" x="170" y="801"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16425482" offsetX="25" offsetY="10" x="394" y="776"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="11184810" offsetX="25" offsetY="10" x="483" y="1064"/>
+    <LengthMark direction="12" color="16711680" length="168" x="507" y="993"/>
+  </Marks>
+</MKM>

@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>EasyShop</title>
+<link type="text/css" rel="Stylesheet" href="StyleSheet3.css" />
+<script type="text/javascript" charset="utf-8" >	
+   var xmlHttp;
+    function creatXMLHttpRequest() {
+        if (window.ActiveXObject) {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        else if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        }
+    }
+    function Check() {
+        if (document.log_form.log_uname.value == '') {
+            alert("请输入会员名");
+            return false;
+        }
+        else if (document.log_form.log_upwd.value == '') {
+            alert("请输入密码");
+            return false;
+        }
+        else {
+        	return true;
+        }
+    }
+    function httpStatteChange() {
+        if (xmlHttp.readyState == 2) {
+        }
+        if (xmlHttp.readyState == 4) {
+            if (xmlHttp.status == 200 || xmlHttp.status == 0) {
+                var myXML = xmlHttp.responseXML;
+                var Node = myXML.getElementsByTagName("rname");
+       			var name = Node[0].childNodes[0].nodeValue;
+                document.getElementById("id").innerHTML=name;
+                var sexNode = myXML.getElementsByTagName("sex");
+                var sex = sexNode[0].childNodes[0].nodeValue;
+                document.getElementById("sex").innerHTML=sex;
+            }
+            else {
+                alert("异步调用出错\n返回的HTTP状态码为:" + xmlHttp.status + "/n返回的HTTP状态信息为:" + xmlHttp.statusText);               
+            }
+        }
+    }
+    function Requst() {
+        Check();
+        creatXMLHttpRequest();
+        if (xmlHttp != null) { 	
+        	var log_uname = document.log_form.log_uname.value;
+        	var log_upwd = document.log_form.log_upwd.value;
+        	var toSend = "log_uname="+encodeURI(log_uname)+"&log_upwd="+encodeURI(log_upwd);
+            xmlHttp.open("post", "../backplat/Log-in.php", true);
+      	  	xmlHttp.setRequestHeader("Content-Length",toSend.length);
+      	  	xmlHttp.setRequestHeader("CONTENT-TYPE","application/x-www-form-urlencoded");	
+            xmlHttp.onreadystatechange = httpStatteChange;
+            xmlHttp.send(toSend);
+        }
+    }
+</script>
+</head>
+<body>
+<form name="log_form">
+  <input type="text" name="log_uname" /><span id="id">1</span><br/>
+  <input type="password" name="log_upwd" /><span id="sex">2</span><br/>
+  <input type="button" onclick="Requst()" value="log in" />
+</form>
+
+</body>
+</html>

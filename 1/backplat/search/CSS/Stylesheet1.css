@@ -1,0 +1,300 @@
+body
+{
+    position:absolute;
+    left:150px;
+    top:-9px;
+    width:990px;
+padding-bottom:60px;
+}
+#top-part
+{
+    position:relative;
+    top:-1px;
+    left:-1px;
+    width:992px;
+    height:200px;
+    font-family:Î¢ÈíÑÅºÚ;
+    font-size:14px;
+    color:white;
+    
+}
+#top-LogIn
+{
+    position:absolute;
+    top:-1px;
+    left:0px;
+    width:992px;
+    height:24px;
+    border-bottom:3px solid #FEAB04;
+    background-color:#FF9A00;
+}
+#top-LogIn-Items1
+{
+    position:absolute;
+    top:4px;
+    left:70px;
+    width:auto;
+    height:24px;
+}
+.inputBox
+{
+    height:9px;
+    border:0px;
+	padding:3px;
+	font-size:12px;
+}
+#top-LogIn-Items2
+{
+    position:absolute;
+    top:4px;
+    left:647px;
+    width:auto;
+    height:24px; 
+}
+.top-LogIn-Items2
+{
+    margin-left:8px;
+    margin-right:8px;
+}
+#top-head
+{
+    position:absolute;
+    top:27px;
+    left:-1px;
+    width:992px;
+    height:120px;
+}
+#logo
+{
+    position:absolute;
+    top:20px;
+    left:71px;
+}
+#search
+{
+    position:absolute;
+    top:26px;
+    left:400px;
+	height:100px;
+	width:500px;
+}
+.searchItems
+{
+	height:25px;
+	width:350px;
+}
+#search ol
+{
+	width:356px;
+	margin:0px;
+}
+#search ol li
+{
+	position:relative;
+	float:left;
+	margin-right:30px;
+}
+#search-text
+{
+	position:absolute;
+	height:28px;
+	width:356px;
+	background-image:url(../../../front/homepage/img/content/ËÑË÷¿ò.png);
+}
+#search-text input
+{
+	border:none;
+	margin:3px;
+	padding:5px;
+	height:12px;
+	width:337px;
+	
+}
+#searchButton
+{
+	position:absolute;
+	left:350px;
+}
+#top-banner
+{
+    position:absolute;
+    top:158px;
+    left:60px;
+    width:841px;
+    height:35px;
+	border-top:1px solid #FFE2AA;
+	border-bottom:1px solid #FFE2AA;
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:17px;
+	color:#999;
+}
+#goods-divide
+{
+	position:absolute;
+	width:811px;
+	height:35px;
+	padding:0px 0px 0px 30px;
+	margin:0;
+}
+#goods-divide li
+{
+	position:relative;
+	height:30px;
+	width:auto;
+	float:left;
+	margin-right:15px;
+	padding-top:6px;
+	text-align:center;
+	list-style-type: none;
+}
+#goods-divide li a
+{
+	padding:6px 18px 6px 18px;
+}
+
+#middle-part
+{ 
+    position:relative;
+    top:0px;
+    left:-1px;
+    width:992px;
+	color:#838383;
+}
+#middle-part-top
+{
+	width:788px;
+	height:30px;
+	position:relative;
+	margin:30px 85px 0px 85px;
+	border:1px solid #999;
+}
+#searchResult
+{
+	position:relative;
+	float:left;
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:14px;
+	height:27px;
+	width:160px;
+	top:2px;
+	left:2px;
+}
+#searchResult p
+{
+	position:relative;
+	float:left;
+	margin-top:3px;
+margin-left:5px;
+	margin-bottom:0px;
+}
+#goodNumber
+{
+	color:#FF7801;
+	margin:0px 4px 0px 4px;
+	font-weight:bold;
+}
+#middle-part-middle
+{
+	position:relative;
+	width:799px;
+	height:auto;	
+	left:85px;
+	top:20px;
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:12px;
+	text-align:center;
+}
+#middle-part-middle p
+{
+	padding:0px 4px 0px 4px;
+	margin:0px;
+}
+.goods
+{
+	position:relative;
+	float:left;
+	height:270px;
+	width:169px;
+	padding-right:38px;	
+	border-bottom:1px solid #999;
+	border-top:none;
+}
+.goods a
+{
+	text-decoration:none;
+	color:#838383;
+}
+.goods img
+{
+	border:none;
+}
+.goodsPic
+{
+	padding:3px;
+	margin:23px 0px 8px 0px;
+	height:161px;
+	width:161px;
+	border:1px solid #999;
+}
+.price
+{
+	color:#FF7801;
+}
+#middle-part-bottom
+{
+	position:relative;
+	width:788px;
+	height:130px;	
+	top:24px;
+	float:left;
+margin-top:20px;
+}
+#pagebuttons
+{
+	position:absolute;
+	left:265px;
+	top:50px;
+	width:auto;
+	height:25px;
+	font-size:14px;
+}
+#pagebuttons span
+{
+	font-size:14px;
+}
+#pagebuttons a
+{
+	text-decoration:none;
+	font-family:Î¢ÈíÑÅºÚ;
+	border:1px solid #999;
+	font-size:14px;
+	color:#838383;
+	padding:3px 5px 3px 5px;
+}
+#bottom-service
+{
+    position:relative;
+    width:850px;
+    height:42px;
+    border-top:2px solid #FF9A00;
+	float:left;
+margin-top:60px;
+left:59px;
+}
+#bottom-service-Items
+{
+    margin:0px;
+    padding:0px;
+    padding-top:6px;
+}
+#bottom-service-Items li
+{
+    position:relative;
+    float:left;
+    text-align:center;
+    list-style-type: none;
+    margin-right:10px;
+    font-family:Î¢ÈíÑÅºÚ;
+    color:#999;
+    font-size:12px;
+}

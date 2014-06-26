@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Easy Buying</title>
+    <link type="text/css" rel="Stylesheet" href="CSS/StyleSheet1.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="JS/JScript1.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="top-part">
+        <div id="top-LogIn">
+            <div id="top-LogIn-Items1">
+                <form action="../../网站后台/Log-in.php" method="post">
+                用户名
+                <input class="inputBox" type="text" name="log_uname" size="12" />
+                &nbsp&nbsp&nbsp 密码
+                <input class="inputBox" type="password" name="log_upwd" size="12" />
+                <a href="" target="_blank" style="text-decoration: none; color: White;">登录</a>&nbsp&nbsp&nbsp
+                <a href="" target="_blank" style="text-decoration: none; color: White;">忘记密码</a>
+                </form>
+            </div>
+            <div id="top-LogIn-Items2">
+                <span class="top-LogIn-Items2"><a href="../register/register.html" target="_blank" style="text-decoration: none;
+                    color: White;">会员注册</a></span> <span class="top-LogIn-Items2"><a href="" target="_blank"
+                        style="text-decoration: none; color: White;">收藏夹</a></span> <span class="top-LogIn-Items2">
+                            <a href="" target="_blank" style="text-decoration: none; color: White;">在线客服</a></span>
+                <span class="top-LogIn-Items2"><a href="" target="_blank" style="text-decoration: none;
+                    color: White;">论坛</a></span>
+            </div>
+        </div>
+        <div id="top-head">
+            <div id="logo">
+                <img src="../new logo/奇葩小组购奇葩.jpg" alt="" /></div>
+            <div id="search">
+            <div class="searchItems">
+            <ol>
+                <li><a href="" style="text-decoration: none; color: #999">数码</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">创意</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">家电</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">跳蚤市场</a></li>
+            </ol>
+            </div>
+            <div style="height:32px">
+                <form name="myform" method="post" action="../../backplat/search/search.php" target="_self">
+                <div id="search-text">
+                    <input id="s" autofocus="true" name="keyword" type="text" size="45"onMouseOver="this.focus()" onFocus="this.select()" class="txt"/>
+                </div>
+                <input id="searchButton" name="submit" type="image" src="img/content/搜索.png" alt="Search" class="btn" onClick="return check();" />
+                </form>
+                </div>
+                <div class="searchItems">
+            <ol>
+                <li><a href="" style="text-decoration: none; color: #999">服饰</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">美食</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">书本</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">动漫周边</a></li>
+            </ol>
+            </div>
+            </div>
+        </div>
+        <div id="top-banner">
+            <ol id="goods-divide">
+                <li class="selected"><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">主页</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">推荐商品</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">热卖商品</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">最新商品</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">优惠活动</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">会员俱乐部</a></li>
+            </ol>
+        </div>
+    </div>
+    <div id="middle-part">
+        <div id="middle-left">
+        <img onMouseOver="ImgChangeOn(this)" onMouseOut="ImgChangeOut(this)" src="img/leftpart/welcome-cartoon.png" alt=""  />
+        
+            <div id="log-in" style="background: white">
+                <img src="img/leftpart/welcome.png" alt="" style="position:absolute;top:10px;left:45px;" />
+                <div id="log-in-part" >
+                    <form name="mid_log_form">
+                    <span id="E">>YOU ARE..</span><span class="C">会员通道</span>
+                    <input type="text" name="ID" style=" margin-top:10px;" class="input" />
+                    <span id="input1">ID&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <input type="password" name="PASS" class="input" />
+                    <span id="input2">PASS</span>
+                    <input  name="button" value="LOG IN" id="button" onclick="Requst()" onMouseOver="ButtonMouse()"
+                        onmouseout="ButtonMouseOut()" />
+                    <a href="" target="_blank" style="text-decoration: none"><span class="font" onMouseOver="FontStyle(this)"
+                        onmouseout="SpanMouseOut(this)">加入会员&nbsp;&nbsp;</span></a><span class="font">|</span><a
+                            href="" style="text-decoration: none"><span onMouseOver="FontStyle(this)" onMouseOut="SpanMouseOut(this)"
+                                class="font">&nbsp;&nbsp;忘记密码</span></a>
+                    </form>
+                </div>
+                <div id="loged-part" style="display:none;">
+                  <img id="sex-picture" src="img/奇葩君.png" alt="" style="position:absolute;top:20px;left:10px;" />
+                  <p align="center" style="position:absolute;top:10px;left:60px;font-family:微软雅黑;font-size:12px;color:#666; line-height:24px;"><span id="uname" style="font-size:15px;color:#FF9540;">陈东</span>&nbsp;&nbsp;<span id="sex">奇葩君</span><br />今天你<span style="color:#FF9540;font-size:16px;">购</span>奇葩了吗？</p>
+                </div>
+                <div id="my-item" style="background-color:#57C6EA"> 
+                  <img src="img/leftpart/购物车.png" alt="" style="position:relative;top:5px;left:5px; float:left;" /><span style="position:absolute;left:37px;top:7px;font-family:微软雅黑;font-size:14px;color:White; float:left"><b>我的购物车</b></span><br />
+                  <p style="font-family:微软雅黑;font-size:10px;color:#5C5842;">&nbsp;&nbsp;&nbsp;您有&nbsp;<span id="item-numbers">0</span>&nbsp;件商品在购物车内</p>
+                  <p style=" position:absolute;top:30px;left:10px;font-family:微软雅黑;font-size:14px; font-weight:700;color:#5C5842;">总计￥<span id="total-money">&nbsp;&nbsp;</span>元</p>
+                  <p style=" position:absolute;top:50px;left:100px;font-family:微软雅黑;font-size:14px; font-weight:700;color:White;"><a href="" style="color:White; text-decoration:none">查看&nbsp;</a>/<a href="" style="color:White; text-decoration:none">&nbsp;结账</a></p>
+                </div>
+            </div>
+          <div id="ads-part" style="background-image: url(img/content/背景.png)">
+                <img src="img/leftpart/1.png" style="position: relative; margin: 12px;" alt="" />
+                <img src="img/leftpart/2.png" style="position: relative; margin: 12px;" alt="" />
+                <img src="img/leftpart/3.png" style="position: relative; margin: 12px;" alt="" />
+                <img src="img/leftpart/4.png" style="position: relative; margin: 12px;" alt="" />
+            </div>
+        </div>
+        <div id="middle-right">
+            <div id="mid-button">
+                <a href="" id="mid-button1" onMouseOver="MidButtonOn1(this)" onMouseOut="MidButtonOut1(this)"
+                    style="background-image: url(img/button/1-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button2" onMouseOver="MidButtonOn2(this)" onMouseOut="MidButtonOut2(this)"
+                    style="background-image: url(img/button/2-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button3" onMouseOver="MidButtonOn3(this)" onMouseOut="MidButtonOut3(this)"
+                    style="background-image: url(img/button/3-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button4" onMouseOver="MidButtonOn4(this)" onMouseOut="MidButtonOut4(this)"
+                    style="background-image: url(img/button/4-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button5" onMouseOver="MidButtonOn5(this)" onMouseOut="MidButtonOut5(this)"
+                    style="background-image: url(img/button/5-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button6" onMouseOver="MidButtonOn6(this)" onMouseOut="MidButtonOut6(this)"
+                    style="background-image: url(img/button/6-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button7" onMouseOver="MidButtonOn7(this)" onMouseOut="MidButtonOut7(this)"
+                    style="background-image: url(img/button/7-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button8" onMouseOver="MidButtonOn8(this)" onMouseOut="MidButtonOut8(this)"
+                    style="background-image: url(img/button/8-1.gif); text-decoration: none;"></a>
+            </div>
+            <div id="mid-banner">
+                <div id="banner-pic">
+                    <img id="banner-js" src="img/bannner/3.jpg" alt="" /></div>
+                <div id="banner-button">
+                    <span onclick="PictrueChange(this)" onmouseover="MidBannerOn(this)" style="background-image: url(img/content/point1.png); text-decoration: none;" id="banner-point1"><span style="display: none">1</span></span>
+                    <span onclick="PictrueChange(this)" onmouseover="MidBannerOn(this)" style="background-image: url(img/content/point1.png); text-decoration: none;" id="banner-point2"><span style="display: none">2</span></span>
+                    <span onclick="PictrueChange(this)" onmouseover="MidBannerOn(this)" style="background-image: url(img/content/point2.png); text-decoration: none;" id="banner-point3"><span style="display: none">3</span></span>
+                    <span onclick="PictrueChange(this)" onmouseover="MidBannerOn(this)" style="background-image: url(img/content/point1.png); text-decoration: none;" id="banner-point4"><span style="display: none">4</span></span>
+                    <span onclick="PictrueChange(this)" onmouseover="MidBannerOn(this)" style="background-image: url(img/content/point1.png); text-decoration: none;" id="banner-point5"><span style="display: none">5</span></span></div>
+            </div>
+            <div id="item-part1">
+                <div class="item-part-head">
+                    <img src="img/content/what's-new.png" alt="" /></div>
+                <div class="item-list1">
+                    <a href="" style="text-decoration:none"><img src="img/商品/1.png" alt="" />
+                    <p align="center" class="item-font">李小孩儿——创意插板<br />￥49.9</p></a>
+                </div>
+                <div class="item-list1">
+                    <a href="" style="text-decoration:none"><img src="img/商品/2.png" alt="" />
+                    <p align="center" class="item-font">爱之语情侣口杯<br />￥23.5</p></a>
+                </div>
+                <div class="item-list1">
+                    <a href="" style="text-decoration:none"><img src="img/商品/3.png" alt="" />
+                    <p align="center" class="item-font">馨语百变笔筒小盆花<br />￥25.0</p></a>
+                </div>
+            </div>
+            <div id="item-part2">
+                <div class="item-part-head">
+                  <img src="img/content/hot.png" alt="" /></div>
+                <div class="item-list2">
+                    <a href="" style="text-decoration:none"><img src="img/商品/4.png" alt="" />
+                    <p align="center" class="item-font">经典粉色耳机<br />￥32.0</p></a>
+                </div>
+                <div class="item-list2">
+                    <a href="" style="text-decoration:none"><img src="img/商品/5.png" alt="" />
+                    <p align="center" class="item-font">创意时钟<br />￥72.0</p></a>
+                </div>
+                <div class="item-list2">
+                    <a href="" style="text-decoration:none"><img src="img/商品/6.png" alt="" />
+                    <p align="center" class="item-font">愤怒的小鸟小音箱<br />￥42.0</p></a>
+                </div>
+            </div>
+            <div id="item-part3">
+              <div class="item-part-head">
+                <img src="img/content/beauty-girl.png" alt="" /></div>
+              <div class="item-list3">
+                    <a href="" style="text-decoration:none"><img src="img/商品/7.png" alt="" />
+                    <p align="center" class="item-font">经典粉色耳机<br />￥32.0</p></a>
+                </div>
+              <div class="item-list3">
+                    <a href="" style="text-decoration:none"><img src="img/商品/8.png" alt="" />
+                    <p align="center" class="item-font">创意时钟<br />￥72.0</p></a>
+              </div>
+              <div class="item-list3">
+                    <a href="" style="text-decoration:none"><img src="img/商品/9.png" alt="" />
+                    <p align="center" class="item-font">愤怒的小鸟小音箱<br />￥42.0</p></a>
+              </div>
+            </div>
+            <div id="item-part4">
+              <div class="item-part-head">
+                <img src="img/content/handsome-guy.png" alt="" /></div>
+              <div class="item-list4">
+                    <a href="" style="text-decoration:none"><img src="img/商品/10.png" alt="" />
+                    <p align="center" class="item-font">经典粉色耳机<br />￥32.0</p></a>
+                </div>
+              <div class="item-list4">
+                    <a href="" style="text-decoration:none"><img src="img/商品/11.png" alt="" />
+                    <p align="center" class="item-font">创意时钟<br />￥72.0</p></a>
+              </div>
+              <div class="item-list4">
+                    <a href="" style="text-decoration:none"><img src="img/商品/12.png" alt="" />
+                    <p align="center" class="item-font">愤怒的小鸟小音箱<br />￥42.0</p></a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-part">
+        <div id="bottom-banner">
+            <img src="img/brand/1.PNG" alt="" />
+            <img src="img/brand/2.PNG" alt="" />
+            <img src="img/brand/3.PNG" alt="" />
+            <img src="img/brand/4.PNG" alt="" />
+            <img src="img/brand/5.PNG" alt="" />
+            <img src="img/brand/7.PNG" alt="" />
+            <img src="img/brand/8.PNG" alt="" />
+            <img src="img/brand/9.PNG" alt="" />
+            <img src="img/brand/10.PNG" alt="" />
+            <img src="img/brand/11.PNG" alt="" />
+            <img src="img/brand/13.PNG" alt="" />
+            <img src="img/brand/14.PNG" alt="" />
+            <img src="img/brand/15.PNG" alt="" />
+            <img src="img/brand/16.PNG" alt="" />
+            <img src="img/brand/17.PNG" alt="" />
+        </div>
+    </div>
+    <div id="bottom-service">
+        <ol id="bottom-service-Items">
+            <li><a href="" style="text-decoration: none; color: #999">关于我们</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">品牌合作</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">售后服务</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">帮助中心</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">服务条款</a></li>
+            <li style="float: right;margin:0px;">?copyright&nbsp&nbsp重庆大学软件学院奇葩小组</li>
+        </ol>
+    </div>
+</body>
+</html>

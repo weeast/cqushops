@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>购奇葩</title>
+    <link type="text/css" rel="Stylesheet" href="CSS/StyleSheet1.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ANSI">
+    <script type="text/javascript" src="JS/JScript1.js" charset="gb2312"></script>
+</head>
+<body onload="CheckLog()">
+    <div id="top-part">
+        <div id="top-LogIn">
+            <div id="top-LogIn-Items1">
+                <form name="top_form">
+                用户名
+                <input class="inputBox" type="text" name="log_uname" size="12" />
+                &nbsp&nbsp&nbsp 密码
+                <input class="inputBox" type="password" name="log_upwd" size="12" />
+                <span onclick="topRequst()" style="text-decoration: none; color: White;">登录</span>&nbsp&nbsp&nbsp
+                <a href=""  style="text-decoration: none; color: White;">忘记密码</a>
+                </form>
+            </div>
+            <div id="top-Loged" style="display:none;"><p align="center" style="font-family:微软雅黑;font-size:14px;color:White;position:relative;top:-14px;left:-103px;" >Welcome to our online shop</p><span style="text-decoration:underline;position:relative;top:-42px;left:280px;">注销登录</span></div>
+            <div id="top-LogIn-Items2">
+                <span class="top-LogIn-Items2"><a href="../register/register.html" target="_blank" style="text-decoration: none;
+                    color: White;">会员注册</a></span> <span class="top-LogIn-Items2"><a href="" target="_blank"
+                        style="text-decoration: none; color: White;">收藏夹</a></span> <span class="top-LogIn-Items2">
+                            <a href="" target="_blank" style="text-decoration: none; color: White;">在线客服</a></span>
+                <span class="top-LogIn-Items2"><a href="" target="_blank" style="text-decoration: none;
+                    color: White;">论坛</a></span>
+            </div>
+        </div>
+        <div id="top-head">
+            <div id="logo">
+                <img src="../new logo/奇葩小组购奇葩.jpg" alt="" /></div>
+            <div id="search">
+            <div class="searchItems">
+            <ol>
+                <li><a href="" style="text-decoration: none; color: #999">数码</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">创意</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">家电</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">跳蚤市场</a></li>
+            </ol>
+            </div>
+            <div style="height:32px">
+                <form name="myform" method="post" action="../../backplat/search/search.php" target="_self">
+                <div id="search-text">
+                    <input id="s" autofocus="true" name="keyword" type="text" size="45"onMouseOver="this.focus()" onFocus="this.select()" class="txt"/>
+                </div>
+                <input id="searchButton" name="submit" type="image" src="img/content/搜索.png" alt="Search" class="btn" onClick="return check();" />
+                </form>
+                </div>
+                <div class="searchItems">
+            <ol>
+                <li><a href="" style="text-decoration: none; color: #999">服饰</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">美食</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">书本</a></li>
+                <li><a href="" style="text-decoration: none; color: #999">动漫周边</a></li>
+            </ol>
+            </div>
+            </div>
+        </div>
+        <div id="top-banner">
+            <ol id="goods-divide">
+                <li class="selected"><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">主页</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">推荐商品</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">热卖商品</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">最新商品</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">优惠活动</a></li>
+                <li><a href="" style="text-decoration: none; color: #999" onMouseOver="goodsDivideButtonOn(this)"
+                    onmouseout="goodsDivideButtonOut(this)">会员俱乐部</a></li>
+            </ol>
+        </div>
+    </div>
+    <div id="middle-part">
+        <div id="middle-left">
+        <img onMouseOver="ImgChangeOn(this)" onMouseOut="ImgChangeOut(this)" src="img/leftpart/welcome-cartoon.png" alt=""  />
+        </div>
+        <div id="middle-right">
+            <div id="mid-button">
+                <a href="" id="mid-button1" onMouseOver="MidButtonOn1(this)" onMouseOut="MidButtonOut1(this)"
+                    style="background-image: url(img/button/1-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button2" onMouseOver="MidButtonOn2(this)" onMouseOut="MidButtonOut2(this)"
+                    style="background-image: url(img/button/2-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button3" onMouseOver="MidButtonOn3(this)" onMouseOut="MidButtonOut3(this)"
+                    style="background-image: url(img/button/3-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button4" onMouseOver="MidButtonOn4(this)" onMouseOut="MidButtonOut4(this)"
+                    style="background-image: url(img/button/4-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button5" onMouseOver="MidButtonOn5(this)" onMouseOut="MidButtonOut5(this)"
+                    style="background-image: url(img/button/5-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button6" onMouseOver="MidButtonOn6(this)" onMouseOut="MidButtonOut6(this)"
+                    style="background-image: url(img/button/6-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button7" onMouseOver="MidButtonOn7(this)" onMouseOut="MidButtonOut7(this)"
+                    style="background-image: url(img/button/7-1.gif); text-decoration: none;"></a>
+                <a href="" id="mid-button8" onMouseOver="MidButtonOn8(this)" onMouseOut="MidButtonOut8(this)"
+                    style="background-image: url(img/button/8-1.gif); text-decoration: none;"></a>
+            </div>  
+        </div>  
+        <div id="middle-bottom">
+          <img src="img/ads.png" style="position:relative;top:10px;" alt="" />
+          <div id="class-name">&nbsp;&nbsp;&nbsp;&nbsp;潮物热卖区</div>
+          <div id="class-line1" class="class-line" style="display:none">
+            <div id="item1" class="item" style="display:none"><div class="picture"><img id="item-pic1" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon1" style="color:#FAA20A">100</span><br /><span id="item-name1">11</span></p></div>
+            <div id="item2" class="item" style="margin-left:9px;display:none"><div class="picture"><img id="item-pic2" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon2" style="color:#FAA20A">100</span><br /><span id="item-name2">11</span></p></div>
+            <div id="item3" class="item" style="margin-left:10px;margin-right:10px;display:none"><div class="picture"><img id="item-pic3" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon3" style="color:#FAA20A">100</span><br /><span id="item-name3">11</span></p></div>
+            <div id="item4" class="item" style="display:none"><div class="picture"><img id="item-pic4" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon4" style="color:#FAA20A">100</span><br /><span id="item-name4">11</span></p></div>
+          </div>
+          <div id="class-line2" class="class-line" style="display:none">
+            <div id="item5" class="item" style="display:none"><div class="picture"><img id="item-pic5" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon5" style="color:#FAA20A">100</span><br /><span id="item-name5">11</span></p></div>
+            <div id="item6" class="item" style="margin-left:9px;display:none"><div class="picture"><img id="item-pic6" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon6" style="color:#FAA20A">100</span><br /><span id="item-name6">11</span></p></div>
+            <div id="item7" class="item" style="margin-left:10px;margin-right:10px;display:none"><div class="picture"><img id="item-pic7" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon7" style="color:#FAA20A">100</span><br /><span id="item-name7">11</span></p></div>
+            <div id="item8" class="item" style="display:none"><div class="picture"><img id="item-pic8" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon8" style="color:#FAA20A">100</span><br /><span id="item-name8">11</span></p></div>
+          </div>
+          <div id="class-line3" class="class-line" style="display:none">
+            <div id="item9" class="item" style="display:none"><div class="picture"><img id="item-pic9" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon9" style="color:#FAA20A">100</span><br /><span id="item-name9">11</span></p></div>
+            <div id="item10" class="item" style="margin-left:9px;display:none"><div class="picture"><img id="item-pic10" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon10" style="color:#FAA20A">100</span><br /><span id="item-name10">11</span></p></div>
+            <div id="item11" class="item" style="margin-left:10px;margin-right:10px;display:none"><div class="picture"><img id="item-pic11" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon11" style="color:#FAA20A">100</span><br /><span id="item-name11">11</span></p></div>
+            <div id="item12" class="item" style="display:none"><div class="picture"><img id="item-pic12" src="img/usb键盘枕头.png" alt="" /></div><p class="item-font" align="center">￥<span id="item-mon12" style="color:#FAA20A">100</span><br /><span id="item-name12">11</span></p></div>
+          </div>
+          <div id="item-page" style="display:none;"><a href="" style=" text-decoration:none;"><span onmouseover="PageChangeOn(this)" onmouseout="PageChangeOut(this)" class="page-button">上一页</span></a><a href="" style=" text-decoration:none;"><span onmouseover="PageChangeOn(this)" onmouseout="PageChangeOut(this)" class="page-button">1</span></a><a href="" style=" text-decoration:none;"><span onmouseover="PageChangeOn(this)" onmouseout="PageChangeOut(this)" class="page-button">2</span></a><a href="" style=" text-decoration:none;"><span onmouseover="PageChangeOn(this)" onmouseout="PageChangeOut(this)" class="page-button" id="page3" style="display:none;">3</span></a><a href="" style=" text-decoration:none;"><span onmouseover="PageChangeOn(this)" onmouseout="PageChangeOut(this)" class="page-button">下一页</span></a></div>
+        </div>
+    </div>
+    <div id="bottom-service">
+        <ol id="bottom-service-Items">
+            <li><a href="" style="text-decoration: none; color: #999">关于我们</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">品牌合作</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">售后服务</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">帮助中心</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">服务条款</a></li>
+            <li style="float: right;margin:0px;">©copyright&nbsp&nbsp重庆大学软件学院奇葩小组</li>
+        </ol>
+      </div>
+</body>
+</html>

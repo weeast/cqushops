@@ -1,0 +1,82 @@
+﻿#head
+{
+    position:absolute;
+    top:20px;
+    left:200px;
+}
+#headfont
+{
+    position:relative;
+    top:-70px;
+    left:200px;
+    font-size:30px;
+    font-family:微软雅黑;
+    font-weight:600;
+    color:#808080;
+}
+#banner
+{
+    position:absolute;
+    top:120px;
+    left:-20px;
+    border:1px solid #FF9A00;
+    width:1384px;
+    height:35px;
+    background-color:#FF9A00;
+}
+#bannerfont1
+{
+    position:relative;
+    left:220px;
+    top:-10px;
+    font-size:20px;
+    font-family:微软雅黑;
+    color:White;
+}
+#bannerfont2
+{
+    position:relative;
+    left:200px;
+    top:-10px;
+    font-size:15px;
+    font-family:微软雅黑;
+    color:#F7EEDC;
+}
+#mid
+{
+    position:absolute;
+    top:180px;
+    left:200px;
+}
+.inmid
+{
+    position:relative;
+    margin:5px;
+    padding:10px;
+    height:30px;
+    width:700px;
+    font-family:微软雅黑;
+    color:#5E5552;
+}   
+.input
+{
+    width:180px;
+    height:24px;
+     border:1px solid #FEAB04;
+}
+#button
+{
+    position:relative;
+    top:10px;
+    left:85px;
+
+}
+#submit
+{
+    width:100px;
+    height:30px;
+    border:1px solid #FFAC05;
+    font-family:微软雅黑;
+    color:#5E5552;
+    background-color:#EFD3CD;
+}

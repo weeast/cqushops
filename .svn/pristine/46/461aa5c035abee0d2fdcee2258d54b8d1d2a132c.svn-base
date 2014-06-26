@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <link type="text/css" rel="Stylesheet" href="StyleSheet2.css" />
+    <script type="text/javascript" src="JScript2.js"></script>
+</head>
+<body>
+  <div id="head">
+    <img src="QQ截图20120417220013.png" alt="wrong"/>
+    <p id="headfont">注册</p>
+    </div>
+  <div id="banner">
+    <p><span id="bannerfont1">填写基本信息</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="bannerfont2">以下均为必填</span></p>
+  </div>
+  <div id="mid">
+    <form action="../backplat/Login.php" method="post" >
+        <div class="inmid" onclick="BackColor(this)"><span>&nbsp;&nbsp;&nbsp;会员名:&nbsp;&nbsp;&nbsp;</span><input type="text" class="input" name="uname" onblur="Return(this)"/><span></span></div>
+        <div class="inmid" onclick="BackColor(this)"><span>登陆密码:&nbsp;&nbsp;&nbsp;</span><input type="password" class="input" name="upwd" /><span></span></div>
+        <div class="inmid" onclick="BackColor(this)"><span>确认密码:&nbsp;&nbsp;&nbsp;</span><input type="password" class="input" name="esupwd" /><span></span></div>
+        <div class="inmid" onclick="BackColor(this)"><span>真实姓名:&nbsp;&nbsp;&nbsp;</span><input type="text" class="input" name="rname" /><span></span></div>
+        <div class="inmid" onclick="BackColor(this)"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别:&nbsp;&nbsp;&nbsp;</span><input type="radio" name="sex" value="男"/>男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="女" />女&nbsp;&nbsp;</div>
+        <div class="inmid" onclick="BackColor(this)"><span>&nbsp;&nbsp;&nbsp;身份证:&nbsp;&nbsp;&nbsp;</span><input type="text" class="input" name="ID_card" /><span></span></div>
+        <div class="inmid" onclick="BackColor(this)"><span>联系电话:&nbsp;&nbsp;&nbsp;</span><input type="text" class="input" name="phoneNum" /><span></span></div>
+        <div class="inmid" onclick="BackColor(this)"><span>电子邮件:&nbsp;&nbsp;&nbsp;</span><input type="text" class="input" name="email" /></div>
+        <div id="button"><input type="submit" name="SUBMIT" value="注册会员" id="submit" /></div>
+    </form>
+  </div>
+</body>
+</html>

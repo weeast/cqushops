@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>注册会员</title>
+    <link type="text/css" rel="Stylesheet" href="CSS/StyleSheet1.css" />
+    <script type="text/javascript" charset="utf-8" src="JS/JScript1.js"></script>
+</head>
+<body>
+    <div id="top-part">
+        <div id="top-welcome">
+            <div id="welcome-info">
+                Welcome to Easy Buying</div>
+            <div id="top-LogIn-Items2">
+                <span class="top-LogIn-Items2"><a href="" target="_blank" style="text-decoration: none;
+                    color: White;">收藏夹</a></span> <span class="top-LogIn-Items2"><a href="" target="_blank"
+                        style="text-decoration: none; color: White;">在线客服</a></span> <span class="top-LogIn-Items2">
+                            <a href="" target="_blank" style="text-decoration: none; color: White;">论坛</a></span>
+            </div>
+        </div>
+        <img src="../new logo/奇葩小组购奇葩.jpg" style="position: absolute; top: 47px; left: 71px;"
+            alt="" />
+        <div id="top-head">
+        </div>
+    </div>
+    <div id="middle-part">
+        <div id="mid-form">
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label class="mustbeinput">
+                        <span class="starSign">*</span>用户名</label></span><div class="register-input-box">
+                            <input id="textHint1" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);Isempty(this.value,this.id);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint(this.value,this.name,this.id)" name="uname" type="text" /><span
+                                    class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label class="mustbeinput">
+                        <span class="starSign">*</span>密码</label></span><div class="register-input-box">
+                            <input id="textHint2" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);Isempty(this.value,this.id);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint(this.value,this.name,this.id)" name="upwd" type="password" /><span
+                                    class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label class="mustbeinput">
+                        <span class="starSign">*</span>确认密码</label></span><div class="register-input-box">
+                            <input id="textHint3" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);Isempty(this.value,this.id);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint(this.value,this.name,this.id)" type="password" name="upwdconfirm" /><span
+                                    class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label>
+                        密码提问</label></span><div class="register-input-box">
+                            <input id="textHint4" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint1(this.value,this.id)" name="pwd_question" type="text" /><span class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label>
+                        提问回答</label></span><div class="register-input-box">
+                            <input id="textHint5" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint1(this.value,this.id)" name="pwd_answer" type="text" /><span class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label class="mustbeinput">
+                        <span class="starSign">*</span>真实姓名</label></span><div class="register-input-box">
+                            <input id="textHint6" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);Isempty(this.value,this.id);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint(this.value,this.name,this.id)" name="rname" type="text" /><span class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label class="mustbeinput">
+                        <span class="starSign">*</span>手机</label></span><div class="register-input-box">
+                            <input id="textHint7" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);Isempty(this.value,this.id);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint(this.value,this.name,this.id)" name="phoneNum" type="text" /><span
+                                    class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label class="mustbeinput">
+                        <span class="starSign">*</span>身份证号</label></span><div class="register-input-box">
+                            <input id="textHint8" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);Isempty(this.value,this.id);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint(this.value,this.name,this.id)" name="ID_card" type="text" /><span
+                                    class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label>
+                        性别</label></span><div class="register-input-box">
+                            <input id="textHint9" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint1(this.value,this.id)" name="sex" type="text" /><span class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label>
+                        地址</label></span><div class="register-input-box">
+                            <input id="textHint10" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint1(this.value,this.id)" name="address" type="text" /><span class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label>
+                        邮编</label></span><div class="register-input-box">
+                            <input id="textHint11" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint1(this.value,this.id)" name="postcode" type="text" /><span class="remind"></span></div>
+            </div>
+            <div class="registerInfo">
+                <span class="register-label">
+                    <label  class="mustbeinput">
+                        <span class="starSign">*</span>E-mail</label></span><div class="register-input-box">
+                            <input id="textHint12" onfocus="onRegisterInputBoxclick(this);showtip(this.name,this.id)"
+                                onblur="onRegisterInputBoxblur(this);Isempty(this.value,this.id);showHint(this.value,this.name,this.id)"
+                                onkeyup="showHint(this.value,this.name,this.id)" name="email" type="text" /><span class="remind"></span></div>
+            </div>
+            <div id="notice">
+                带*号的为必填项目</div>
+            <div id="submit">
+                <input type="image" src = "img/提交按钮.png" alt = "提交" onclick="request()"/></div>          
+        </div>
+        
+    </div>
+    <div id = "success">
+        <img src= "../homepage/img/leftpart/welcome-cartoon.png" alt="welcome" />
+        <div id = "successtext1">恭喜您，注册成功。</div>
+        <div id = "successtext2">5秒后自动跳转到主页。若不能自动跳转，<a href = "../homepage/EasyBuying.html" target = "_self">点击这里</a></div>
+        </div>
+    <div id="bottom-service">
+        <ol id="bottom-service-Items">
+            <li><a href="" style="text-decoration: none; color: #999">关于我们</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">品牌合作</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">售后服务</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">帮助中心</a>&nbsp&nbsp|</li>
+            <li><a href="" style="text-decoration: none; color: #999">服务条款</a></li>
+            <li style="float: right; margin: 0px;">©copyright&nbsp&nbsp重庆大学软件学院奇葩小组</li>
+        </ol>
+    </div>
+</body>
+</html>
